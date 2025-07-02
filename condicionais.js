@@ -38,6 +38,7 @@ alert(recebeBonus);
 //Exercício 3
 // Switch Case
 
+/*
 let dia = parseInt(prompt("Digite qual é o dia da semana: \n0-Domingo\n1-Segunda\n2-Terça\n3-Quarta\n4-Quinta\n5-Sexta\n6-Sábado"));
 let listaDias = [0,1,2,3,4,5,6];
 let diaSemana=["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
@@ -69,3 +70,5 @@ switch(dia){
         alert(`Hoje é ${diaSemana[dia]}\nO Horário de funcionamento é de 10h às 14h`);
         break;
 }
+*/
+
