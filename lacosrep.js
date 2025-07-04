@@ -41,3 +41,27 @@ for(let i =0;i<senha.length;i++){
 }
 */
 
+//Exercício 4 WHILE
+//Crie um programa que simule o processamento das caixas, exibindo as válidas e ignorando as danificadas.
+//O programa deve parar o processamento assim que 5 caixas válidas forem processadas.
+//A linha só pode processar no máximo 5 caixas válidas por vez.
+//Mas, algumas caixas com número de identificação negativo precisam ser ignoradas, pois estão danificadas.
+
+let listaCaixas=[];
+let listaProcessadas = [];
+let caixasProcessadas=0;
+
+while (caixasProcessadas<5){
+    let numeroCaixa = Math.floor(Math.random() * 21) - 10;
+    listaCaixas.push(numeroCaixa);
+    if(numeroCaixa>0){
+        listaProcessadas.push(numeroCaixa);
+        caixasProcessadas++;
+  }
+}
+
+for(let i=1;i<=listaCaixas.length;i++){
+    let mensagem = listaCaixas[i-1]>0?`Caixa Processada: ${listaCaixas[i-1]}`:`Caixa Danificada: ${listaCaixas[i-1]}`;
+    alert(mensagem);
+}
+ alert(`Limite de caixas processadas Atingido: ${caixasProcessadas} Caixas: ${listaProcessadas}`);
