@@ -1,7 +1,7 @@
 //Exercício 1 FOR
 //Gerra Números aleatórios de 1 a 50
 //Interromper o laço caso o numero gerado seja 15
-//interromper depois de 50 tentativas e contar a quantidade de tentativas
+//interromper depois de 30 tentativas e contar a quantidade de tentativas
 //usar Math.floor(Math.Random()*(n)+1)
 
 for(let i=1;i<=30;i++){
