@@ -47,6 +47,7 @@ for(let i =0;i<senha.length;i++){
 //A linha só pode processar no máximo 5 caixas válidas por vez.
 //Mas, algumas caixas com número de identificação negativo precisam ser ignoradas, pois estão danificadas.
 
+/*
 let listaCaixas=[];
 let listaProcessadas = [];
 let caixasProcessadas=0;
@@ -65,3 +66,27 @@ for(let i=1;i<=listaCaixas.length;i++){
     alert(mensagem);
 }
  alert(`Limite de caixas processadas Atingido: ${caixasProcessadas} Caixas: ${listaProcessadas}`);
+*/
+
+ //Exercício 5 WHILE
+
+ //Você está desenvolvendo o sistema de login de um app interno da empresa. 
+ //O sistema precisa permitir que o usuário tente digitar sua senha corretamente até 3 vezes. 
+ //Se digitar certo, exibe uma mensagem de acesso permitido. Se errar 3 vezes, bloqueia o acesso.
+
+let senha = prompt("Digite sua senha");
+let tentativas =0;
+
+if(senha==="secret"){
+    alert("Acesso Liberado!");
+}
+while(senha!=="secret"){
+    tentativas ++;
+    alert(`Tentativa ${tentativas} inválida!`)
+    if(tentativas===3){
+        alert("Senha Bloqueada!");
+        break;
+    }
+    senha = prompt("Digite sua senha");
+ }
+ alert("Acesso Liberado!");
