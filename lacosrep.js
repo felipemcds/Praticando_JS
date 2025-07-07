@@ -1,5 +1,5 @@
 //Exercício 1 FOR
-//Gerra Números aleatórios de 1 a 50
+//Gerar Números aleatórios de 1 a 30
 //Interromper o laço caso o numero gerado seja 15
 //interromper depois de 30 tentativas e contar a quantidade de tentativas
 //usar Math.floor(Math.Random()*(n)+1)
@@ -90,3 +90,4 @@ while(senha!=="secret"){
     senha = prompt("Digite sua senha");
  }
  alert("Acesso Liberado!");
+ 
