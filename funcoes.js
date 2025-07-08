@@ -95,7 +95,7 @@ let num2 = parseInt(prompt("Digite o Segundo número"));
 alert(`O resultado final é: ${resultado(operador,num1,num2)}`);
 */
 
-//Exercício Função Timeout
+//Exercício Função setTimeout
 
 /*
 const userID = '4545656';
@@ -107,3 +107,34 @@ const userID = '4545656';
 
 setTimeout((ID)=>alert(`Sessão de ${ID} está inativa!`),4000,userID); //Neste caso já passei a funcao diretamente como argumento
 */
+
+//Exercício 5 Funções (Saudacao)
+/*
+//const saudacao =(nome)=>{
+//    return nome?`Olá ${nome}`:`Olá Pessoa`
+//}
+
+const saudacao =(nome)=> nome ===""?`Olá Pessoa`:`Olá ${nome}`; //Usando operador ternário
+
+let nome = prompt("Digite o sue nome: ");
+alert(saudacao(nome));
+*/
+
+//Exercício 6 Funções (Frete)
+//Até 5 km: frete fixo de R$ 5
+//De 5.1 km até 20 km: R$ 0,50 por quilômetro
+//Acima de 20 km: frete fixo de R$ 20
+
+let quilometragem = parseFloat(prompt("Digite a quilometragem percorrida: "));
+
+const calculaFrete =(km)=>{
+    if(km<=5){
+        return 5;
+    }else if(km>5 && 20>=km){
+        return km*0.5;
+    }else{
+        return 20;
+    }
+}
+
+alert(`O custo do seu frete é de R$: ${calculaFrete(quilometragem)}`);
