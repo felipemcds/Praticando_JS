@@ -165,6 +165,7 @@ alert(responderUsuario(usuario,mostrarResposta));
 // classificarConsumo(consumo): Retorna a classificação com base na tabela:
 // exibirResumo(nomeAparelho, consumo, classificacao): Exibe uma mensagem como:"Geladeira tem consumo de 180 kWh/mês e é classificada como Consumo moderado."
 
+/*
 function calculaConsumo (potencia,horasPorDia,aparelho) {
     return classificaConsumo((potencia*horasPorDia*30)/1000,aparelho);
 }
@@ -184,3 +185,21 @@ let pot = parseInt(prompt("Informe a potência do seu aparelho em Watts (w): "))
 let horas = parseInt(prompt("Informe a quantidade de horas que o aparelho fica ligado por dia: "));
 
 alert(calculaConsumo(pot,horas,aparelho));
+*/
+
+
+//Exercício 8 Funções - Recursividade
+//Sua missão é criar uma função chamada contagemRegressiva que:
+// - Receba um número inteiro positivo (ex: 5)
+// - Imprima esse número e, a cada chamada, reduza em 1
+// - Quando chegar em 0, exiba a mensagem: "Lançamento!"
+// - A função deve ser implementada de forma recursiva, sem usar loops (for ou while).
+
+function contagemRegressiva (numero){
+    if(numero===0)return alert("Lançamento!");
+    alert(numero);
+    return(contagemRegressiva(numero-1));
+}
+
+let num = parseInt(prompt("Defina um número para fazer a contagem regressiva: "));
+alert(contagemRegressiva(num));
