@@ -143,6 +143,7 @@ alert(`O custo do seu frete é de R$: ${calculaFrete(quilometragem)}`);
 // Sua tarefa é criar uma função chamada responderUsuario, que receba dois parâmetros:
 //o nome do usuário, e uma função de callback que será executada após 3 segundos.
 
+/*
 let usuario = prompt("Digite o seu nome");
 
 function responderUsuario(nome,callback){
@@ -154,3 +155,32 @@ function mostrarResposta(nome){
     alert(`${nome}, aqui está a resposta para a sua dúvida:`);
 }
 alert(responderUsuario(usuario,mostrarResposta));
+*/
+
+//Exercício 8 Funções - Consumo (Callback)
+// O sistema deve calcular o consumo mensal estimado com base no uso diário 
+// classificar o consumo (baixo, moderado ou alto) e exibir uma mensagem clara para o usuário.
+// Sua missão é criar três funções separadas, com responsabilidades bem definidas:
+// calcularConsumo(potencia, horasPorDia): Retorna o consumo mensal em kWh, com base na fórmula: consumo = (potencia × horasPorDia × 30) / 1000
+// classificarConsumo(consumo): Retorna a classificação com base na tabela:
+// exibirResumo(nomeAparelho, consumo, classificacao): Exibe uma mensagem como:"Geladeira tem consumo de 180 kWh/mês e é classificada como Consumo moderado."
+
+function calculaConsumo (potencia,horasPorDia,aparelho) {
+    return classificaConsumo((potencia*horasPorDia*30)/1000,aparelho);
+}
+
+function classificaConsumo (consumo,aparelho) {
+    if(consumo<50) return exibeResumo(aparelho,consumo,"Baixo consumo !");
+    else if(consumo<200) return exibeResumo(aparelho,consumo,"Consumo Moderado !");
+    else return exibeResumo(aparelho,consumo,"Alto Consumo !");
+}
+
+function exibeResumo (aparelho,consumo,classificacao) {
+    alert(`${aparelho} tem o consumo de ${consumo} kWh/mês e é classificada como ${classificacao}`);
+}
+
+let aparelho = prompt("Digite o nome do seu aparelho");
+let pot = parseInt(prompt("Informe a potência do seu aparelho em Watts (w): "));
+let horas = parseInt(prompt("Informe a quantidade de horas que o aparelho fica ligado por dia: "));
+
+alert(calculaConsumo(pot,horas,aparelho));
