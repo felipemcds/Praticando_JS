@@ -125,16 +125,32 @@ alert(saudacao(nome));
 //De 5.1 km até 20 km: R$ 0,50 por quilômetro
 //Acima de 20 km: frete fixo de R$ 20
 
+/*
 let quilometragem = parseFloat(prompt("Digite a quilometragem percorrida: "));
 
 const calculaFrete =(km)=>{
-    if(km<=5){
-        return 5;
-    }else if(km>5 && 20>=km){
-        return km*0.5;
-    }else{
-        return 20;
-    }
+    if(km<=5) return 5;
+    else if(20>=km) return km*0.5; 
+    else return 20;
 }
 
 alert(`O custo do seu frete é de R$: ${calculaFrete(quilometragem)}`);
+*/
+
+//Exercício 7 Funções (Callback)
+//Imagine que você está desenvolvendo uma interface de atendimento online.
+// Quando o usuário envia uma pergunta, o sistema precisa simular que está "pensando" ou "processando a resposta", e só depois exibir a resposta final.
+// Sua tarefa é criar uma função chamada responderUsuario, que receba dois parâmetros:
+//o nome do usuário, e uma função de callback que será executada após 3 segundos.
+
+let usuario = prompt("Digite o seu nome");
+
+function responderUsuario(nome,callback){
+    alert(`Olá ${nome} Estamos Processando a Sua pergunta ...`);
+    setTimeout(callback,3000,nome);
+}
+
+function mostrarResposta(nome){
+    alert(`${nome}, aqui está a resposta para a sua dúvida:`);
+}
+alert(responderUsuario(usuario,mostrarResposta));
