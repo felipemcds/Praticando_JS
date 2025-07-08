@@ -70,6 +70,7 @@ alert(`O resultado final é: ${resultado(operador,num1,num2)}`);
 
 //Callback + Arrow
 
+/*
 function soma(a,b){return a+b};
 function multiplica(a,b){return a*b};
 
@@ -92,3 +93,17 @@ let num1 = parseInt(prompt("Digite o Primeiro número"));
 let num2 = parseInt(prompt("Digite o Segundo número"));
 
 alert(`O resultado final é: ${resultado(operador,num1,num2)}`);
+*/
+
+//Exercício Função Timeout
+
+/*
+const userID = '4545656';
+
+//const avisaUsuario = (ID)=> console.log(`Sessao de ${ID} está inativa`);
+
+//setTimeout(avisaUsuario,3000,userID); //Quando eu preciso usar a função timeout para passar um argumento, passo ele depois do tempo
+// Estou chamando a função avisaUsuario após 3000ms
+
+setTimeout((ID)=>alert(`Sessão de ${ID} está inativa!`),4000,userID); //Neste caso já passei a funcao diretamente como argumento
+*/
