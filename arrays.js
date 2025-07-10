@@ -208,7 +208,7 @@ const cpfsNovo = cpfs.map((num)=>{    //Quando eu uso map, não estou passando o
 console.log(cpfsNovo);
 */
                             //EXERCÍCIOS
-
+/*
 //Exercício 1 - Arrays
 //Crie um array com os valores das despesas.
 //Use um loop for para somar os valores
@@ -220,7 +220,37 @@ let somaDespesas =0;
 for(let i=0;i<qtdeDespesas;i++){
     let valorDespesa = parseFloat(prompt(`Digite qual o valor da despesa ${i+1}: `))
     listaDespesas[i] = valorDespesa;
-    somaDespesas=somaDespesas+listaDespesas[i];
+    somaDespesas+=listaDespesas[i];
 }
 
 alert(`O valor da soma das despesas é de R$: ${somaDespesas}`);
+*/
+
+/*
+//Exercício 2 - Arrays
+
+//Crie um array com alguns pedidos.
+//Faça uma cópia do array.
+//Adicione um novo item apenas na cópia.
+//Exiba os dois arrays para mostrar que o original não foi alterado.
+
+let qtdeItens = parseInt(prompt("Defina a quantidade de Itens a serem listados: "));
+
+while(typeof qtdeItens!='number'){
+    qtdeItens = parseInt(prompt("A quantidade deve receber um valor numérico\nDefina a quantidade de Itens a serem listados: "));
+}
+let listaItens = []
+
+for(let i=0;i<qtdeItens;i++){
+    let itens = prompt(`Digite qual o nome do Item ${i+1}: `);
+    listaItens[i] = itens.toUpperCase();
+}
+
+const listaItensclone = listaItens.map((elemento)=>{
+    return elemento;
+})
+
+listaItensclone[listaItensclone.length-1] = "MEIA";
+
+alert(`${listaItens}\n${listaItensclone}`);
+*/
