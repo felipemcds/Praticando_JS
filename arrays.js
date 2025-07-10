@@ -151,9 +151,10 @@ for(let i=0;i<=(y-x);i++){
 alert(arraySeq);
 */
 
-/*
+
 // clonar array multidimensional com "deep copy"
 //tentativa
+/*
 let arr1 = [[1,2],3,[4,5,6]];
 let arr2 =[];
 
@@ -173,9 +174,10 @@ arr2[0][0]=99;
 
 console.log(arr2);
 console.log(arr1);
+*/
 
 // Deep Copy Alura
-
+/*
 let array1 = [[1,2],3,[4,5,6]];
 let array2 =[];
 
@@ -208,6 +210,7 @@ const cpfsNovo = cpfs.map((num)=>{    //Quando eu uso map, não estou passando o
 console.log(cpfsNovo);
 */
                             //EXERCÍCIOS
+
 /*
 //Exercício 1 - Arrays
 //Crie um array com os valores das despesas.
@@ -224,9 +227,8 @@ for(let i=0;i<qtdeDespesas;i++){
 }
 
 alert(`O valor da soma das despesas é de R$: ${somaDespesas}`);
-*/
 
-/*
+
 //Exercício 2 - Arrays
 
 //Crie um array com alguns pedidos.
@@ -254,3 +256,27 @@ listaItensclone[listaItensclone.length-1] = "MEIA";
 
 alert(`${listaItens}\n${listaItensclone}`);
 */
+
+//Exercício 3 - Arrays
+//Criar um array com objetos contendo nome e idade de cada participante.
+//Usar o método filter() para:
+// - Selecionar somente os participantes com 18 anos ou mais.
+// - Exibir no console a mensagem "Acesso liberado para: [nome]" para cada um que passou.
+//Usar o método map() para criar um novo array com apenas os nomes dos autorizados.
+//Exibir a lista de aprovados no final.
+
+const participantes = [
+  { nome: 'Ana', idade: 17 },
+  { nome: 'Bruno', idade: 22 },
+  { nome: 'Carla', idade: 19 },
+  { nome: 'Daniel', idade: 15 },
+  { nome: 'Eduarda', idade: 25 }
+];
+
+const maiorIdade = participantes.filter(nome=>nome.idade>18);  //Ficar atento que filter retorna true ou false
+
+maiorIdade.forEach(nome=>console.log(`Acesso liberado para ${nome.nome}`));
+
+const autorizados = maiorIdade.map(nome=>nome.nome);
+
+console.log(`Lista de aprovados: ${autorizados}`);
