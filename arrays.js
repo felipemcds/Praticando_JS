@@ -207,7 +207,6 @@ const cpfsNovo = cpfs.map((num)=>{    //Quando eu uso map, não estou passando o
 
 console.log(cpfsNovo);
 */
-
                             //EXERCÍCIOS
 
 //Exercício 1 - Arrays
