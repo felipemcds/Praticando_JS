@@ -257,6 +257,7 @@ listaItensclone[listaItensclone.length-1] = "MEIA";
 alert(`${listaItens}\n${listaItensclone}`);
 */
 
+/*
 //Exercício 3 - Arrays
 //Criar um array com objetos contendo nome e idade de cada participante.
 //Usar o método filter() para:
@@ -280,3 +281,46 @@ maiorIdade.forEach(nome=>console.log(`Acesso liberado para ${nome.nome}`));
 const autorizados = maiorIdade.map(nome=>nome.nome);
 
 console.log(`Lista de aprovados: ${autorizados}`);
+*/
+
+//Exercício 4 - Arrays
+// Mostrar todos os produtos (nome, preço, quantidade).
+// Filtrar os que venderam mais de 100 unidades e exibir seus nomes.
+// Calcular os totais de venda de cada produto.
+// Descobrir o mais lucrativo.
+
+const vendas = [];
+let lucro=0
+let maisVendido=0
+
+const produtos = [
+  { nome: 'Notebook', preco: 2500, quantidadeVendida: 75 },
+  { nome: 'Mouse', preco: 100, quantidadeVendida: 180 },
+  { nome: 'Teclado', preco: 150, quantidadeVendida: 125 },
+  { nome: 'Monitor', preco: 900, quantidadeVendida: 95 }
+];
+
+console.log(`\nRelatorio de produtos vendidos:\n`)
+produtos.forEach(prod=>{
+    console.log(`Produto: ${prod.nome} | Preço: ${prod.preco} | Quantidade Vendida: ${prod.quantidadeVendida}`);
+})
+
+console.log(`\nProdutos com Venda Acima de 100 unidades:\n`)
+const maisVendidos = produtos.filter(prod=>prod.quantidadeVendida>100);
+maisVendidos.forEach(prod=>console.log(prod.nome));
+
+console.log(`\nTotal de vendas pro produto:\n`)
+produtos.forEach(prod=>{
+    const totalVendido = prod.preco*prod.quantidadeVendida;
+    vendas.push({Produto:prod.nome,Faturamento:totalVendido});
+})
+console.log(vendas)
+
+//Produto mais lucrativo
+for(let i of vendas){
+    if(i.Faturamento>lucro){
+        lucro =i.Faturamento;
+        maisVendido =i.Produto;
+    }continue;
+}
+console.log(`\nO produto mais lucrativo é o: ${maisVendido} com o faturamento de R$: ${lucro} \n`);
